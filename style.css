@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --bg-img1: url(/images/bg1.png);
+  --bg-img2: url(/images/bg2.png);
+  --bg-img3: url(/images/bg3.png); 
+
+  --text-color-heading: hsl(240, 7%, 78%);
+  --text-color-main: hsl(240, 9%, 89%);
+  --tex-color-bold: hsl(240, 7%, 100%);
+
+  --button-color: hsl(240, 7%, 100%);
+  --button-color-hover: hsla(194, 97%, 31%, 1);
+  ;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-image: url(/images/bg1.png);
+  background-size: 100vw 100vh;
+
+  min-height: 100vh;
+
+  font-family: 'Roboto', sans-serif;
+
+  padding-left: clamp(3rem, 3rem + 8vw, 10rem)
+}
+
+
+header {
+  display: flex;
+  align-items: center;
+  
+  padding: 4rem 0 4rem 7.2rem;
+}
+
+header svg {
+  margin-right: 3.3rem;
+}
+
+header nav {
+  display: flex;
+  gap: 3.2rem;
+}
+
+nav a {
+  font-weight: 400;
+  font-size: 2.1rem;
+  line-height: 2.2rem;
+  
+  color: var(--text-color-heading);
+}
+
+nav a:hover,
+.focus {
+  font-weight: 700;
+  color: var(--tex-color-bold);
+}
+
+.home-page,
+.error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 50vh;
+}
+
+.home-page h1,
+.universe-page h1,
+.explore-page h1,
+.error-page h1 {
+  font-weight: 700;
+  font-size: 4.8rem;
+  line-height: 125%;
+
+  color: var(--text-color-main);
+
+  margin-top: 6.3rem;
+}
+
+.home-page .home-button {
+  margin-top: 2.4rem;
+  padding: 1.2rem 3.2rem;
+
+  font-weight: 700;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+  color: var(--tex-color-bold);
+
+  background: none;
+  border: 2px solid var(--button-color);
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.home-page .home-button:hover {
+   background: var(--button-color);
+   color: var(--button-color-hover);
+}
+
+.universe-page,
+.explore-page {
+  display: grid;
+  gap: 1.6rem;
+
+  /* margin-left: clamp(3rem, 3rem + 8vw, 10rem); */
+}
+
+.universe-page p,
+.explore-page p {
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 160%;
+  text-align: justify;
+  color: var(--text-color-main);
+
+  max-width: 65rem;
+}
